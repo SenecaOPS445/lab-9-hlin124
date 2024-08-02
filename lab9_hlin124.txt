@@ -1,0 +1,21 @@
+
+PLAY [Configure ops445 vm] *****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [vmlab]
+
+TASK [Update Apache (httpd)] ***************************************************
+ok: [vmlab]
+
+TASK [Install EPEL repository if not already installed] ************************
+ok: [vmlab]
+
+TASK [Remove 'tree' package] ***************************************************
+ok: [vmlab]
+
+TASK [Set the hostname] ********************************************************
+ok: [vmlab]
+
+PLAY RECAP *********************************************************************
+vmlab                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,37 @@
+---
+- name: Configure ops445 vm
+  hosts: vmlab
+  user: student
+  become: yes
+  vars:
+    seneca_id: hlin124
+    labs:
+      - lab1
+      - lab2
+      - lab3
+      - lab4
+      - lab5
+      - lab6
+      - lab7
+      - lab8
+      - lab9
+
+  tasks:
+    - name: Update Apache (httpd)
+      yum:
+        name: httpd
+        state: latest
+
+    - name: Install EPEL repository if not already installed
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Remove 'tree' package
+      yum:
+        name: tree
+        state: absent
+
+    - name: Set the hostname
+      hostname:
+        name: hlin124
